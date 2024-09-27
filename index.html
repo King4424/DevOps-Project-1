@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Frontend Website</title>
+    <title>SpeedWheels Bike Store</title>
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f1f1f1;
         }
         header {
-            background-color: #333;
+            background-color: #444;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
             text-align: center;
         }
         nav {
-            margin: 0;
-            padding: 10px;
+            background-color: #333;
+            padding: 10px 0;
             text-align: center;
         }
         nav a {
@@ -31,52 +31,115 @@
             text-decoration: none;
             font-weight: bold;
         }
+        nav a:hover {
+            color: #f1c40f;
+        }
+        .banner {
+            background-image: url('https://example.com/bike-banner.jpg');
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner h1 {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            font-size: 3em;
+        }
         section {
             padding: 20px;
             text-align: center;
         }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 30%;
+            margin: 15px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
             width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product h3 {
+            color: #333;
+            margin: 15px 0;
+        }
+        .product p {
+            color: #777;
+            font-size: 0.9em;
+        }
+        footer {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
         }
     </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>SpeedWheels Bike Store</h1>
     </header>
 
     <!-- Navigation Section -->
     <nav>
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
+        <a href="#">Bikes</a>
+        <a href="#">Accessories</a>
+        <a href="#">About Us</a>
         <a href="#">Contact</a>
     </nav>
 
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>Your Adventure Begins Here</h1>
+    </div>
+
     <!-- Main Content Section -->
     <section>
-        <h2>About Us</h2>
-        <p>This is a simple front-end website. It can be customized to showcase your content.</p>
-
-        <h3>Our Services</h3>
-        <ul>
-            <li>Web Design</li>
-            <li>Web Development</li>
-            <li>SEO Optimization</li>
-        </ul>
+        <h2>Featured Bikes</h2>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="https://example.com/bike1.jpg" alt="Mountain Bike">
+                <h3>Mountain X-Pro</h3>
+                <p>Conquer any trail with the durable and versatile Mountain X-Pro. Built for adventure and performance.</p>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="https://example.com/bike2.jpg" alt="Road Bike">
+                <h3>Roadster Elite</h3>
+                <p>The perfect blend of speed and agility. The Roadster Elite is designed for high performance on city streets.</p>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="https://example.com/bike3.jpg" alt="Electric Bike">
+                <h3>EcoRider Electric</h3>
+                <p>Go green with the EcoRider Electric bike, featuring a powerful motor for a smooth and eco-friendly ride.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>© 2024 MyWebsite | All Rights Reserved</p>
+        <p>© 2024 SpeedWheels Bike Store | All Rights Reserved</p>
     </footer>
 </body>
 </html>
-
