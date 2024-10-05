@@ -2,7 +2,7 @@
 
 
 # AIM: 
-## *Cloning HTML file from GitHub to Jenkins-server building job using Ansible and deploying HTML file to remote web-server*
+## *Cloning HTML file from GitHub to Jenkins-server building job using Ansible and deploying HTML file to remote web-server, A Complete CI/CD Automation Project. *
 
 ## STEPS:
 **1. Launch 3 Servers (Linux)**
