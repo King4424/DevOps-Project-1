@@ -89,6 +89,51 @@ systemctl status httpd
 
 **9. Launch Jenkins Dashboard on browser using their public ip on port number 8080 and configure it and install publish over ssh plugin**
 
-**10. Login to GitHub account and create one repository and create one Index.html file**
+**10. Login to GitHub account and create one repository on that repository create one Index.html file**
+**11. Go to Ansible-server and In the hosts file add webservers private ip**
+```
+nano /etc/ansible/hosts
+```
+
+```
+[webserver]
+private ip
+```
+**12. Now we have to write ansible-playbook in ansible-server**
+```
+mkdir sourcecode
+cd sourcecode
+nano deplyment.yml
+```
+
+```
+---
+- name: CopyFile from source and deploy on Destination
+  hosts: webserver
+  tasks:
+    - name: copy index.html to destination
+      copy:
+         src: /opt/index.html
+         dest: /var/www/html/index.html
+```
+**13. Go to jenkins dashboard**
+**--> create job (freestyle job)**
+**--> Go to configuration - enter github url in the git section**
+**--> set poll scm to [ H/2 * * * * ] for every 2 min check**
+
+**14. Go to manage jenkins -> system configuration --> publish over ssh-section**
+```
+add
+Name = Jenkins
+Hostname = Private ip of jenkins
+Username = root
+Advanced settings -> add password of jenkins
+( do the same for Ansible and add ansible configuration )
+```
+**15. Back to job-configuration --> go to build section --> select send artifacts over ssh --> select jenkins --> in the exec command section enter**
+```
+ansible-playbook /home/ec2-user/sourcecode/deployment.yml
+```
+**16. now build again --> if success, copy public ip of webserver and paste on browser, you should see your application !!**
 
 
