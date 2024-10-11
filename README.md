@@ -65,10 +65,14 @@ yum install git -y
 
 ```
 amazon-linux-extras install epel -y
+# OR
+sudo yum install python3-pip -y
 ```
 
 ```
 yum install ansible -y
+#OR
+sudo pip3 install ansible
 ```
 **7. on web server install apache (httpd)**
 ```
